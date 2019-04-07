@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculate Loading</title>
+  </head>
+  <body onload="onLoad()">
+    <div class="container">
+      <h2>Select Voltage</h2>
+      <div class="voltages">
+        <div class="nominal-voltage" id="forty-one">4160v</div>
+        <div class="nominal-voltage" id="twelve-five">12.5kv</div>
+        <div class="nominal-voltage" id="thirty-four-five">34.5kv</div>
+        <div class="nominal-voltage" id="sixty-nine">69kv</div>
+      </div>
+      <div class="amp-input">
+        <h2>Enter Amperage</h2>
+        <input
+          type="number"
+          name="amperage"
+          id="amperage"
+          onchange="getNumber()"
+          required
+        />
+        <div id="btn">Calculate</div>
+      </div>
+      <div class="results">
+        <p id="fully-loaded"></p>
+        <p id="emergency-high"></p>
+        <p id="operational-high"></p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
